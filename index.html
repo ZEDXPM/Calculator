@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="main.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container ">
+    <div class="calculator">
+        <input type="text" id="display" class="form-control mb-3" readonly disabled>
+        <div class="row">
+            <div class="col-3"><button class="btn btn-danger" onclick="backspace()"><=</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('(')">(</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue(')')">)</button></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('7')">7</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('8')">8</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('9')">9</button></div>
+            <div class="col-3"><button class="btn btn-primary" onclick="appendValue('/')">&divide;</button></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('4')">4</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('5')">5</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('6')">6</button></div>
+            <div class="col-3"><button class="btn btn-primary" onclick="appendValue('*')">&times;</button></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('1')">1</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('2')">2</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('3')">3</button></div>
+            <div class="col-3"><button class="btn btn-primary" onclick="appendValue('-')">-</button></div>
+        </div>
+        <div class="row">
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('0')">0</button></div>
+            <div class="col-3"><button class="btn btn-secondary" onclick="appendValue('.')">.</button></div>
+            <div class="col-3"><button class="btn btn-danger" onclick="clearDisplay()">C</button></div>
+            <div class="col-3"><button class="btn btn-primary" onclick="appendValue('+')">+</button></div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12"><button id="button" class="btn btn-success" onclick="calculateResult()">=</button></div>
+            <div class="col-12"><button id="for" class="btn btn-success" onclick="DoIt()">click</button></div>
+        </div>
+        <div id="error-container"></div>
+    </div>
+
+</div>
+<script src="js/bootstrap.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
